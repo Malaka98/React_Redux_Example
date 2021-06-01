@@ -1,16 +1,6 @@
 import axios from "axios";
 
-import {
-  FETCH_USERS_FAILURE,
-  FETCH_USERS_REQUEST,
-  FETCH_USERS_SUCCESS,
-} from "./types";
-
-export const fetchUsersRequest = () => {
-  return {
-    type: FETCH_USERS_REQUEST,
-  };
-};
+import { FETCH_USERS_FAILURE, FETCH_USERS_SUCCESS } from "./types";
 
 const fetchUserSuccess = (users) => {
   return {
@@ -28,8 +18,6 @@ const fetchUsersFailure = (error) => {
 
 export const fetchUsers = () => {
   return (dispatch) => {
-    dispatch(fetchUsersRequest);
-
     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
