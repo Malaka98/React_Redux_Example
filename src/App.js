@@ -1,14 +1,11 @@
 import React from "react";
 
-import Button from "./Components/Button";
-import PostList from "./Components/PostList";
+import UserList from "./Components/UserList";
 
 export default function App() {
   return (
     <div>
-      <Button />
-      <br />
-      <PostList />
+      <UserList />
     </div>
   );
 }
